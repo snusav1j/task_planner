@@ -1,4 +1,4 @@
 # task_planner
-Планировщик задач
+Мини приложение "Планировщик задач"
 
-
+![planner](https://github.com/snusav1j/task_planner/assets/106090175/be8ece72-91b2-4c37-9368-c02c34795969)
