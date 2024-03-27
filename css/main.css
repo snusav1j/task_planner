@@ -177,3 +177,9 @@ span.add-date-time {
   padding-right: 10px;
   margin-right: 10px;
 }
+
+span.add-date-time {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
