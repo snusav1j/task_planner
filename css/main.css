@@ -320,7 +320,8 @@ body {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  margin: 15px;
+  margin: 10px;
+  padding: 5px;
   overflow: hidden;
 }
 
@@ -341,12 +342,12 @@ body {
 
 @keyframes slidein {
   from {
-/*     height: 60px; */
+    /* height: 60px; */
     transform: translate(150px, 0px);
     opacity: 0;
   }
   to {
-/*     height: 60px; */
+    /* height: 60px; */
     transform: translate(0px, 0px);
     opacity: 1;
   }
