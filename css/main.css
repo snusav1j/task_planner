@@ -341,12 +341,12 @@ body {
 
 @keyframes slidein {
   from {
-    height: 0px;
-    transform: translate(50px, 0px);
+/*     height: 60px; */
+    transform: translate(150px, 0px);
     opacity: 0;
   }
   to {
-    height: 60px;
+/*     height: 60px; */
     transform: translate(0px, 0px);
     opacity: 1;
   }
