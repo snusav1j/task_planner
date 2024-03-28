@@ -18,6 +18,8 @@ if (tasksQuanity.number === 0) {
     tasksInfo.innerHTML = `Список задач пуст`;
 }
 
+
+
 // вызов функции по событию
 form.addEventListener('submit', addTask);
 
@@ -60,10 +62,10 @@ function addTask(e) {
                     <li id="${newTask.id}" class="list-group-item d-flex justify-content-between task-item">
                         <span class="task-name-info"><span class="add-date-time">${newTask.addTime}<br>${newTask.addDate}</span><span class="task-info-text">${newTask.text}</span></span>
                             <div class="task-item__buttons">
-                                <button type="button" data-action="done" class="btn-action btn-done">
+                                <button onclick="showToast(doneTaskMsg)" type="button" data-action="done" class="btn-action btn-done">
                                     <img src="img/tick.svg" alt="Done" width="18" height="18">
                                 </button>
-                                <button type="button" data-action="delete" class="btn-action btn-remove">
+                                <button onclick="showToast(removeTaskMsg)" type="button" data-action="delete" class="btn-action btn-remove">
                                     <img src="img/cross.svg" alt="Done" width="18" height="18">
                                 </button>
                             </div>
@@ -134,10 +136,10 @@ function doneTask(e){
                         <li id="${doneTaskText.id}" class="list-group-item d-flex justify-content-between task-item">
                             <span class="task-name-info"><span class="add-date-time">${doneTaskText.addTime}<br>${doneTaskText.addDate}</span><span class="task-info-text">${doneTaskText.text}</span></span>
                             <div class="task-item__buttons">
-                                <button type="button" data-action="return" class="btn-action btn-return">
+                                <button onclick="showToast(returnDoneTaskMsg)" type="button" data-action="return" class="btn-action btn-return">
                                     <img src="img/return.svg" alt="Done" width="18" height="18">
                                 </button>
-                                <button type="button" data-action="delete" class="btn-action btn-remove">
+                                <button onclick="showToast(removeDoneTaskMsg)" type="button" data-action="delete" class="btn-action btn-remove">
                                     <img src="img/cross.svg" alt="Done" width="18" height="18">
                                 </button>
                             </div>
@@ -181,7 +183,7 @@ function returnTask(e){
     // добавление кнопки для возможности возврата задач
     buttonElem.outerHTML = 
                             `
-                            <button type="button" data-action="done" class="btn-action btn-done">
+                            <button onclick="showToast(doneTaskMsg)" type="button" data-action="done" class="btn-action btn-done">
                                 <img src="img/tick.svg" alt="Done" width="18" height="18">
                             </button>
                             `;

@@ -17,10 +17,10 @@ tasks.forEach(function (task) {
                     <li id="${task.id}" class="list-group-item d-flex justify-content-between task-item">
                         <span class="task-name-info"><span class="add-date-time">${task.addTime}<br>${task.addDate}</span><span class="task-info-text">${task.text}</span></span>
                             <div class="task-item__buttons">
-                                <button type="button" data-action="done" class="btn-action btn-done">
+                                <button onclick="showToast(doneTaskMsg)" type="button" data-action="done" class="btn-action btn-done">
                                     <img src="./img/tick.svg" alt="Done" width="18" height="18">
                                 </button>
-                                <button type="button" data-action="delete" class="btn-action btn-remove">
+                                <button onclick="showToast(removeTaskMsg)" type="button" data-action="delete" class="btn-action btn-remove">
                                     <img src="./img/cross.svg" alt="Done" width="18" height="18">
                                 </button>
                             </div>
@@ -39,10 +39,10 @@ doneTasks.forEach(function (doneTasks) {
     <li id="${doneTasks.id}" class="list-group-item d-flex justify-content-between task-item">
         <span class="task-name-info"><span class="add-date-time">${doneTasks.addTime}<br>${doneTasks.addDate}</span><span class="task-info-text">${doneTasks.text}</span></span>
         <div class="task-item__buttons">
-            <button type="button" data-action="return" class="btn-action btn-return">
+            <button onclick="showToast(returnDoneTaskMsg)" type="button" data-action="return" class="btn-action btn-return">
                 <img src="./img/return.svg" alt="Done" width="18" height="18">
             </button>
-            <button type="button" data-action="delete" class="btn-action btn-remove">
+            <button onclick="showToast(removeDoneTaskMsg)" type="button" data-action="delete" class="btn-action btn-remove">
                 <img src="./img/cross.svg" alt="Done" width="18" height="18">
             </button>
         </div>
