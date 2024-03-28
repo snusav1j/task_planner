@@ -332,7 +332,7 @@ body {
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 20px #64646496;
+  box-shadow: 0 0 5px #64646496;
   display: flex;
   align-items: center;
   cursor: pointer;
