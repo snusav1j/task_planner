@@ -199,7 +199,7 @@ span.task-info-text {
 /* anims */
 
 body {
-	background: linear-gradient(45deg, rgb(2, 160, 152), rgb(0, 109, 128), rgb(29, 51, 175), rgba(89, 0, 255, 0.767));
+	background: linear-gradient(45deg, rgb(2, 150, 142), rgb(21, 127, 146), rgb(25, 46, 168), rgba(81, 18, 199, 0.767));
 	background-repeat: no-repeat;
 	background-size: 400% 100%;
 	backdrop-filter: brightness(40%);
