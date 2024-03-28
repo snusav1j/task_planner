@@ -132,6 +132,16 @@ li#emptyList{
   margin-bottom: 0;
 }
 
+ul#tasksList > .list-group-item:hover{
+  transition: ease .3s;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+#done-tasks-list > .list-group-item:hover{
+  transition: ease .3s;
+  background: #f4f4f4;
+  cursor: pointer;
+}
 @media screen and (max-width: 767px){
   .task-item__buttons > button{
     width: 22px !important;
