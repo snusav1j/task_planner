@@ -158,6 +158,9 @@ li#emptyList{
   border-radius: .25rem 0px 0px .25rem;
 }
 
+.planner{
+  padding: 30px;
+}
 
 .form-group .add-button span{
   display: none;
