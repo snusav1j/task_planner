@@ -178,6 +178,14 @@ span.add-date-time {
   margin-right: 10px;
 }
 
+span.task-info-text {
+  font-size: 12px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* anims */
+
 body {
 	background: linear-gradient(45deg, rgb(2, 160, 152), rgb(0, 109, 128), rgb(29, 51, 175), rgba(89, 0, 255, 0.767));
 	background-repeat: no-repeat;
