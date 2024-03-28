@@ -1,5 +1,5 @@
 # task_planner
-Мини приложение "Планировщик задач"
+Мини приложение "Планировщик задач" (адаптивное)
 
 [github pages](https://snusav1j.github.io/task_planner/)
 
