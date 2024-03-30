@@ -14,7 +14,7 @@ if (localStorage.getItem('doneTasksQuanity')) {
 tasks.forEach(function (task) {
     const taskHtml = 
                     `
-                    <li id="${task.id}" class="list-group-item d-flex justify-content-between task-item">
+                    <li id="${task.id}" class="list-group-item d-flex justify-content-between task-item open-modal-btn">
                         <span class="task-name-info"><span class="add-date-time">${task.addTime}<br>${task.addDate}</span><span class="task-info-text">${task.text}</span></span>
                             <div class="task-item__buttons">
                                 <button onclick="showToast(doneTaskMsg)" type="button" data-action="done" class="btn-action btn-done">
@@ -36,7 +36,7 @@ tasks.forEach(function (task) {
 doneTasks.forEach(function (doneTasks) {
     const doneTaskHtml = 
     `
-    <li id="${doneTasks.id}" class="list-group-item d-flex justify-content-between task-item">
+    <li id="${doneTasks.id}" class="list-group-item d-flex justify-content-between task-item open-modal-btn">
         <span class="task-name-info"><span class="add-date-time">${doneTasks.addTime}<br>${doneTasks.addDate}</span><span class="task-info-text">${doneTasks.text}</span></span>
         <div class="task-item__buttons">
             <button onclick="showToast(returnDoneTaskMsg)" type="button" data-action="return" class="btn-action btn-return">

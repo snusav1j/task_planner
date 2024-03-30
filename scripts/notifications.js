@@ -1,5 +1,8 @@
 // получить блок с уведомдегиями для добавления элементов с уведомлениями
-let toastBox = document.getElementById('toastBox')
+let toastBox = document.getElementById('toastBox');
+
+// удаление уведомления по клику
+toastBox.addEventListener('click', removeToastOnClick)
 
 // контент элементов с уведомлениями
 let doneTaskMsg = '<div><img src="./img/tick.svg" alt="Done" width="18" height="18"><span style="margin-left: 10px">Задача выполнена!</span></div>';
@@ -15,6 +18,17 @@ function showToast(msg){
     toastBox.appendChild(toast);
 
     setTimeout(()=>{
-        toast.remove();
+        toast.classList.add('hide-toast');
     }, 2000);
+    setTimeout(()=>{
+        toast.remove();
+    }, 2500);
 };
+
+function removeToastOnClick(e) {
+    e.target.classList.add('hide-toast');
+    setTimeout(()=>{
+        e.target.remove();
+    }, 500);
+}
+

@@ -1,7 +1,7 @@
 const form = document.querySelector('#form');
 const taskInput = document.querySelector('#taskInput');
 const tasksList = document.querySelector('#tasksList');
-const doneTasksList = document.querySelector('#done-tasks-list');
+const doneTasksList = document.querySelector('#doneTasksList');
 const emptyList = document.querySelector('#emptyList');
 const tasksInfo = document.querySelector('.tasks-info'); // Список дел (кол-во)
 
@@ -59,7 +59,7 @@ function addTask(e) {
     // добавить задание в разметку html
     const taskHtml = 
                     `
-                    <li id="${newTask.id}" class="list-group-item d-flex justify-content-between task-item">
+                    <li id="${newTask.id}" class="list-group-item d-flex justify-content-between task-item open-modal-btn">
                         <span class="task-name-info"><span class="add-date-time">${newTask.addTime}<br>${newTask.addDate}</span><span class="task-info-text">${newTask.text}</span></span>
                             <div class="task-item__buttons">
                                 <button onclick="showToast(doneTaskMsg)" type="button" data-action="done" class="btn-action btn-done">
@@ -133,7 +133,7 @@ function doneTask(e){
 
     const doneTaskHtml = 
                         `
-                        <li id="${doneTaskText.id}" class="list-group-item d-flex justify-content-between task-item">
+                        <li id="${doneTaskText.id}" class="list-group-item d-flex justify-content-between task-item open-modal-btn">
                             <span class="task-name-info"><span class="add-date-time">${doneTaskText.addTime}<br>${doneTaskText.addDate}</span><span class="task-info-text">${doneTaskText.text}</span></span>
                             <div class="task-item__buttons">
                                 <button onclick="showToast(returnDoneTaskMsg)" type="button" data-action="return" class="btn-action btn-return">
@@ -167,11 +167,17 @@ function returnTask(e){
     // если нажата кнопка вернуть задачу в работу:
     if (e.target.dataset.action !== "return") return;
 
-    const parentElem = e.target.closest('ul#done-tasks-list > li.list-group-item');
+    const parentElem = e.target.closest('ul#doneTasksList > li.list-group-item');
     const buttonElem = e.target.closest('.task-item__buttons > .btn-return');
+    
+
+   
+    // console.log(buttonElem)
 
     // поиск индекса в массиве по айди в списке выполненных задач
     const id = Number(parentElem.id);
+    const buttonRemoveElem = document.getElementById(`${id}`);
+    const a = buttonRemoveElem.querySelector('.task-item__buttons > .btn-remove').setAttribute('onclick', 'showToast(removeTaskMsg)')
     const index = doneTasks.findIndex((task) => task.id === id);
 
     // вернуть данные в массив задач
@@ -201,7 +207,7 @@ function returnTask(e){
 function deleteDoneTask(e) {
     if (e.target.dataset.action !== 'delete') return;
 
-    const parentElem = e.target.closest('ul#done-tasks-list > li.list-group-item');
+    const parentElem = e.target.closest('ul#doneTasksList > li.list-group-item');
 
     // поиск индекса в массиве по айди в списке выполненных задач
     const id = Number(parentElem.id);
