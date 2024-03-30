@@ -26,9 +26,11 @@ function showToast(msg){
 };
 
 function removeToastOnClick(e) {
-    e.target.classList.add('hide-toast');
-    setTimeout(()=>{
-        e.target.remove();
-    }, 500);
+    if (e.target != toastBox){
+        e.target.classList.add('hide-toast');
+        setTimeout(()=>{
+            e.target.remove();
+        }, 500);
+    }
 }
 
