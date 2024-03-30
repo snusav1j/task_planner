@@ -17,12 +17,17 @@
     margin: 0 auto;
     margin-top: 25px;
     padding: 20px;
-    width: 59%;
+    width: 70%;
     height: 600px;
     box-shadow: 0 0 5px #363636;
 }
-
+@media screen and (max-width: 575px){
+    .modal-content{
+        width: 90%;
+    }
+}
 .close-modal-btn{
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +35,7 @@
     top: 0;
     right: 0;
     float: right;
-    width: 30px; height: 30px;
+    width: 28px; height: 28px;
     cursor: pointer;
 }
 .close-modal-btn > path{
@@ -39,4 +44,64 @@
 
 .modal-content {
     display: block;
+}
+
+span.modal-task-id {
+    white-space: normal;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, rgba(0, 110, 105, 0.7), rgba(14, 86, 99, 0.7), rgb(25, 46, 168, 0.7), rgba(81, 18, 199, 0.6));
+	background-repeat: no-repeat;
+	background-size: 400% 100%;
+	backdrop-filter: brightness(10%);
+	animation: slide 6.66s infinite;
+}
+.modal-content-header{
+    padding-top: 11px;
+    width: fit-content;
+}
+@media screen and (max-width: 575px){
+    span.modal-task-id{
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+.modal-task-info > span {
+    display: block;
+}
+.modal-task-info{
+    padding: 30px 0;
+}
+.modal-task-info > .modal-task-num{
+    margin-bottom: 10px;
+}
+.in-process {
+    color: green;
+}
+
+.show-modal{
+    animation: show 0.4s;
+} 
+@keyframes show {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.hide-modal{
+    animation: hide 0.4s;
+}
+@keyframes hide {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
 }
