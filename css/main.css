@@ -454,8 +454,10 @@ body {
 
 form .btn {
 	display: block;
-	width: 38px;
-	height: 38px;
+	min-width: 38px;
+	max-width: 38px;
+	min-height: 38px;
+	max-height: 38px;
 	border: none;
 	border-radius: 0px  5px 5px 0px;
 	padding: 5px;
@@ -495,9 +497,10 @@ form svg {
 		fill: none;
 		stroke: #fff;
 		stroke-miterlimit: 10;
-		stroke-width: 2px
+		stroke-width: 2px;
 	}
 }
+
 @keyframes plus {
 	0%, 100% {
 		transform: scale(1);
