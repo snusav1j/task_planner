@@ -47,16 +47,16 @@
 }
 
 span.modal-task-id {
-	white-space: normal;
-	border-radius: 5px;
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	padding: 10px 20px;
-	background: linear-gradient(45deg, rgba(0, 110, 105, 0.7), rgba(14, 86, 99, 0.7), rgb(25, 46, 168, 0.7), rgba(81, 18, 199, 0.6));
+    white-space: normal;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, rgba(0, 110, 105, 0.7), rgba(14, 86, 99, 0.7), rgb(25, 46, 168, 0.7), rgba(81, 18, 199, 0.6));
 	background-repeat: no-repeat;
 	background-size: 400% 100%;
-/* 	backdrop-filter: brightness(10%); */
+	/* backdrop-filter: brightness(10%); */
 	animation: slide 6.66s infinite;
 }
 .modal-content-header{

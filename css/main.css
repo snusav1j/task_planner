@@ -450,3 +450,69 @@ body {
     max-width: 1400px !important;
   }
 }
+
+
+form .btn {
+	display: block;
+	width: 38px;
+	height: 38px;
+	border: none;
+	border-radius: 0px  5px 5px 0px;
+	padding: 5px;
+	background-color: #167bce;
+	transition: background-color 200ms linear;
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(61, 141, 206);
+	}
+	&:focus {
+		outline: none;
+    background: rgb(0, 204, 255);
+	}
+	&.added {
+		.plus {
+			animation: plus 1300ms linear;
+		}
+		.check {
+			animation: check 400ms ease-out 200ms forwards alternate;
+			animation-iteration-count: 2;
+		}
+	} 
+}
+
+form svg {
+	width: 100%;
+
+	.plus {
+		transform-origin: center;
+		will-change: transform;
+		fill: #fff;
+	}
+	.check {
+		stroke-dasharray: 20;
+		stroke-dashoffset: 20;
+		will-change: stroke-dashoffset;
+		fill: none;
+		stroke: #fff;
+		stroke-miterlimit: 10;
+		stroke-width: 2px;
+	}
+}
+
+@keyframes plus {
+	0%, 100% {
+		transform: scale(1);
+	}
+	15%, 85% {
+		transform: scale(0);
+	}
+}
+
+@keyframes check {
+	from {
+		stroke-dashoffset: -20;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
