@@ -5,6 +5,8 @@ const doneTasksList = document.querySelector('#doneTasksList');
 const emptyList = document.querySelector('#emptyList');
 const tasksInfo = document.querySelector('.tasks-info'); // Список дел (кол-во)
 
+const button = document.getElementById('addButton'); // добавить задачу
+
 // переменные с данными (список выполненных и список актуальных задач)
 let tasks = [];
 let doneTasks = [];
@@ -231,4 +233,14 @@ function saveToLocalStorage(){
     localStorage.setItem('doneTasks', JSON.stringify(doneTasks));
     localStorage.setItem('tasksQuanity', JSON.stringify(tasksQuanity));
     localStorage.setItem('doneTasksQuanity', JSON.stringify(doneTasksQuanity));  
+}
+
+
+handleClick = function() {
+	let alreadySet = button.classList.contains('added');
+	
+	if (taskInput.value !== "") {
+		button.classList.add('added');
+		setTimeout(function(){ button.classList.remove('added'); }, 1400);
+	}
 }
