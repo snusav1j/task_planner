@@ -495,10 +495,9 @@ form svg {
 		fill: none;
 		stroke: #fff;
 		stroke-miterlimit: 10;
-		stroke-width: 2px;
+		stroke-width: 2px
 	}
 }
-
 @keyframes plus {
 	0%, 100% {
 		transform: scale(1);
